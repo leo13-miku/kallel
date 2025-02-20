@@ -1,0 +1,40 @@
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+h1 {
+    text-align: center;
+    color: rgb(0, 195, 255);
+}
+h2 {
+    text-align: center;
+    color: #ffffff;
+}
+li{
+    text-align: center;
+    color: #ffffff;
+}
+p {
+    margin: 15px;
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+}
+ul{
+    text-align: center;
+    color: #ffffff;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
+footer {
+    background-color: rgb(75, 75, 72);
+    text-align:center;
+    padding: 10px;
+    color: rgb(0, 204, 255);
+    position:sticky;
+    bottom:auto;
+}
