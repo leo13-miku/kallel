@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade cnpj</title>
+</head>
+<body>
+    
+    <h1>consulta cnpj</h1>
+
+    <label for="cnpj">CNPJ:</label>
+    <input type="text" id="cnpj" name="cnpj" placeholder="Digite o CNPJ">
+    <button onclick="consultarCNPJ()">Consultar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        async function consultarCNPJ() {
+            const cnpj = document.getElementById("cnpj").value;
+            const url = `http://localhost:8080/cnpj/${cnpj}`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.text();
+                document.getElementById("resultado").textContent = data;
+            } catch (error) {
+                document.getElementById("resultado").textContent = "Erro: " + error;
+            }
+        }
+    </script>
+
+
+</body>
+</html>
